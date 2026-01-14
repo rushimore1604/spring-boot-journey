@@ -71,6 +71,9 @@ Learning project – Day 2
 
 ---
 
+### Status
+Learning project – Day 3
+
 ## Tech Stack
 - Java 17
 - Spring Boot 3
