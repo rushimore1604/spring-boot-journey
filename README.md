@@ -51,6 +51,26 @@ Learning project – Day 2
 
 ---
 
+## Day 3 – POST API with JSON
+
+### What this project does
+- Accepts JSON data from the client
+- Handles POST requests using Spring Boot
+- Converts JSON request body into Java object
+- Returns a success response from the server
+
+### API Endpoint
+- POST `/user` → creates a user using JSON data
+
+### Sample Request (JSON)
+```json
+{
+  "name": "Rushi",
+  "age": 21
+}
+
+---
+
 ## Tech Stack
 - Java 17
 - Spring Boot 3
