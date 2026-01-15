@@ -26,8 +26,12 @@ public class Hello {
     }
 
     @PostMapping("/user")
-    public String createUser(@RequestBody UserRequest user) {
-        return "User " + user.getName() + " created successfully. Age: " + user.getAge();
+    public UserResponse createUser(@RequestBody UserRequest user) {
+        return new UserResponse(
+                "User created successfully",
+                user.getName(),
+                user.getAge()
+        );
     }
 }
 

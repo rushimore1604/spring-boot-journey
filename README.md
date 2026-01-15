@@ -1,6 +1,6 @@
 # Spring Boot Journey (Beginner to Advanced)
 
-This repository contains my Spring Boot learning project created as part of my daily coding practice.
+This repository contains my Spring Boot learning journey, built step by step as part of my daily coding practice — from basics to advanced concepts.
 
 ---
 
@@ -9,19 +9,21 @@ This repository contains my Spring Boot learning project created as part of my d
 ### What this project does
 - Runs a Spring Boot application
 - Exposes a basic REST API
-- Returns a simple response from the browser
+- Returns a simple response in the browser
 
 ### API Endpoint
-- GET `/` → returns: `Spring Boot is working!`
+- **GET** `/`  
+  → Returns: `Spring Boot is working!`
 
 ### How to Run
-- Clone the repository
-- Open the project in IntelliJ IDEA
-- Run the main Spring Boot class
-- Open browser and visit: http://localhost:8080
+1. Clone the repository
+2. Open the project in IntelliJ IDEA
+3. Run the main Spring Boot application class
+4. Open browser and visit:  
+   `http://localhost:8080`
 
 ### Status
-Learning project – Day 1
+Learning project – **Day 1**
 
 ---
 
@@ -33,21 +35,21 @@ Learning project – Day 1
 - Shows application status and server time
 
 ### API Endpoints
-- GET `/hello` → returns greeting message
-- GET `/status` → returns application status
-- GET `/time` → returns current server time
+- **GET** `/hello` → Greeting message
+- **GET** `/status` → Application status
+- **GET** `/time` → Current server time
 
 ### How to Run
-- Clone the repository
-- Open the project in IntelliJ IDEA
-- Run the main Spring Boot class
-- Open browser and visit:
-    - http://localhost:8080/hello
-    - http://localhost:8080/status
-    - http://localhost:8080/time
+1. Clone the repository
+2. Open the project in IntelliJ IDEA
+3. Run the main Spring Boot application class
+4. Open browser and visit:
+  - `http://localhost:8080/hello`
+  - `http://localhost:8080/status`
+  - `http://localhost:8080/time`
 
 ### Status
-Learning project – Day 2
+Learning project – **Day 2**
 
 ---
 
@@ -56,11 +58,11 @@ Learning project – Day 2
 ### What this project does
 - Accepts JSON data from the client
 - Handles POST requests using Spring Boot
-- Converts JSON request body into Java object
-- Returns a success response from the server
+- Converts JSON request body into a Java object
+- Returns a success response
 
 ### API Endpoint
-- POST `/user` → creates a user using JSON data
+- **POST** `/user` → Creates a user using JSON input
 
 ### Sample Request (JSON)
 ```json
@@ -68,18 +70,3 @@ Learning project – Day 2
   "name": "Rushi",
   "age": 21
 }
-
-### Status
-Learning project – Day 3
-
----
-
-## Tech Stack
-- Java 17
-- Spring Boot 3
-- Maven
-
----
-
-## License
-This project is licensed under the MIT License.
