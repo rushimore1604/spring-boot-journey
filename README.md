@@ -65,8 +65,35 @@ Learning project – **Day 2**
 - **POST** `/user` → Creates a user using JSON input
 
 ### Sample Request (JSON)
-```json
 {
   "name": "Rushi",
   "age": 21
 }
+
+### Status
+Learning project – **Day 3**
+
+---
+
+## Day 4 – JSON Response with DTO
+### What this project does
+- Returns structured JSON responses
+- Uses DTO (Data Transfer Object) for clean API design
+- Separates request and response models
+- Improves maintainability and readability
+
+### API Endpoint
+
+- **POST** `/user` → 
+
+### Sample Response (JSON)
+{
+"message": "User created successfully",
+"name": "Rushi",
+"age": 21
+}
+
+### Status
+Learning project – **Day 4**
+
+---
