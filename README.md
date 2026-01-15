@@ -20,7 +20,7 @@ This repository contains my Spring Boot learning journey, built step by step as 
 2. Open the project in IntelliJ IDEA
 3. Run the main Spring Boot application class
 4. Open browser and visit:  
-   `http://localhost:8080`
+   http://localhost:8080
 
 ### Status
 Learning project – **Day 1**
@@ -44,9 +44,9 @@ Learning project – **Day 1**
 2. Open the project in IntelliJ IDEA
 3. Run the main Spring Boot application class
 4. Open browser and visit:
-  - `http://localhost:8080/hello`
-  - `http://localhost:8080/status`
-  - `http://localhost:8080/time`
+  - http://localhost:8080/hello
+  - http://localhost:8080/status
+  - http://localhost:8080/time
 
 ### Status
 Learning project – **Day 2**
