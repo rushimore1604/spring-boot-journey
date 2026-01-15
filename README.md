@@ -99,10 +99,8 @@ Learning project – **Day 4**
 ---
 
 ### Tech Stack
-
 - Java 17
-- Spring
-- Boot 3
+- Spring Boot 3
 - Maven
 
 ## License
