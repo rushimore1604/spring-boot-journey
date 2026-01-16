@@ -1,8 +1,14 @@
 package com.rushi.demo;
 
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+
 public class UserRequest {
 
+    @NotBlank(message = "Name is required")
     private String name;
+
+    @Min(value = 1, message = "Age must be greater than 0")
     private int age;
 
     public String getName() {

@@ -98,6 +98,27 @@ Learning project – **Day 4**
 
 ---
 
+## Day 5 – Validation (Request Body Validation)
+
+### What this project does
+- Validates incoming JSON request data
+- Prevents invalid user creation
+- Returns clean validation errors
+
+### API Endpoint
+- POST `/user`
+
+### Sample Invalid Request
+{
+  "name": "",
+  "age": 0
+}
+
+### Status
+Learning project – **Day 5**
+
+---
+
 ### Tech Stack
 - Java 17
 - Spring Boot 3
