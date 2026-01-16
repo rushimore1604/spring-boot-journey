@@ -110,7 +110,7 @@ Learning project – **Day 4**
 
 ### Sample Invalid Request
 {
-  "name": "",
+  "name": "Rushi",
   "age": 0
 }
 
