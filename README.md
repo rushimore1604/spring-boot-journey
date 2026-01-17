@@ -131,6 +131,43 @@ Learning project – Day 6
 
 ---
 
+## Day 7 – MySQL + JPA Integration
+
+### What this project does
+- Connected Spring Boot with MySQL database
+- Created a `User` entity mapped to MySQL table
+- Stored user data into MySQL using Spring Data JPA
+- Verified database insert using MySQL Workbench
+
+### API Endpoint
+- **POST** `/user` → Saves user data into MySQL
+
+### Sample Request (JSON)
+{
+  "name": "Rushi",
+  "age": 21
+}
+
+### Sample Response (JSON)
+{
+"message": "User saved successfully with ID: 1",
+"name": "Rushi",
+"age": 21
+}
+
+### Database Table
+- Table Name: users
+- Database: springboot_journey 
+
+### How to Verify in MySQL
+- USE springboot_journey;
+- SELECT * FROM users;
+
+### Status
+Learning project – Day 7
+
+---
+
 ### Tech Stack
 - Java 17
 - Spring Boot 3
