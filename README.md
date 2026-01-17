@@ -65,10 +65,10 @@ Learning project – **Day 2**
 - **POST** `/user` → Creates a user using JSON input
 
 ### Sample Request (JSON)
-{
-  "name": "Rushi",
-  "age": 21
-}
+- {
+  - "name": "Rushi",
+  - "age": 21
+- }
 
 ### Status
 Learning project – **Day 3**
@@ -87,11 +87,11 @@ Learning project – **Day 3**
 - **POST** `/user` → 
 
 ### Sample Response (JSON)
-{
-"message": "User created successfully",
-"name": "Rushi",
-"age": 21
-}
+- {
+  - "message": "User created successfully",
+  - "name": "Rushi",
+  - "age": 21
+- }
 
 ### Status
 Learning project – **Day 4**
@@ -109,10 +109,10 @@ Learning project – **Day 4**
 - POST `/user`
 
 ### Sample Invalid Request
-{
-  "name": "",
-  "age": 0
-}
+- {
+  - "name": "",
+  - "age": 0
+- }
 
 ### Status
 Learning project – **Day 5**
@@ -143,17 +143,17 @@ Learning project – Day 6
 - **POST** `/user` → Saves user data into MySQL
 
 ### Sample Request (JSON)
-{
-  "name": "Rushi",
-  "age": 21
-}
+- {
+  - "name": "Rushi",
+  - "age": 21 
+- }
 
 ### Sample Response (JSON)
-{
-"message": "User saved successfully with ID: 1",
-"name": "Rushi",
-"age": 21
-}
+- {
+  - "message": "User saved successfully with ID: 1",
+  - "name": "Rushi",
+  - "age": 21
+- }
 
 ### Database Table
 - Table Name: users
