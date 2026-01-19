@@ -168,6 +168,24 @@ Learning project – Day 7
 
 ---
 
+## Day 8 – CRUD APIs with MySQL
+
+### What this project does
+- Implemented full CRUD operations using Spring Boot + MySQL
+- Added APIs to create, read, update, and delete users
+
+### API Endpoints
+- **POST** `/api/users`
+- **GET** `/api/users`
+- **GET** `/api/users/{id}`
+- **PUT** `/api/users/{id}`
+- **DELETE** `/api/users/{id}`
+
+### Status
+Learning project – **Day 8**
+
+---
+
 ### Tech Stack
 - Java 17
 - Spring Boot 3
