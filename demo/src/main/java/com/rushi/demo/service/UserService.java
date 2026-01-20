@@ -9,6 +9,7 @@ import com.rushi.demo.UserRequest;
 import com.rushi.demo.UserResponse;
 import com.rushi.demo.entity.User;
 import com.rushi.demo.repository.UserRepository;
+import com.rushi.demo.exception.UserNotFoundException;
 
 @Service
 public class UserService {
@@ -49,7 +50,7 @@ public class UserService {
 
     public User getUserById(Long id) {
         return userRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("User not found with id: " + id));
+                .orElseThrow(() -> new UserNotFoundException(id));
     }
 
     public User updateUser(Long id, UserRequest request) {
