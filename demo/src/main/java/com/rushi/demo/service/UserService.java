@@ -21,7 +21,7 @@ public class UserService {
     }
 
     public String hello() {
-        return "Hello! Spring Boot Day 2 🚀";
+        return "Hello! Spring Boot Day 2 ";
     }
 
     public String status() {

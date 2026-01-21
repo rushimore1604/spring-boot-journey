@@ -217,6 +217,23 @@ Learning project – **Day 9**
 
 ---
 
+## Day 10 – ResponseEntity & Proper HTTP Status Codes
+
+### What this project does
+- Implemented `ResponseEntity` for professional API responses
+- Returns correct HTTP status codes for REST operations
+
+### Status Codes Used
+- `201 Created` → User created successfully
+- `200 OK` → Fetch / Update success
+- `204 No Content` → Delete success
+- `404 Not Found` → User not found (from Day 9)
+
+### Status
+Learning project – **Day 10**
+
+---
+
 ### Tech Stack
 - Java 17
 - Spring Boot 3
