@@ -234,6 +234,21 @@ Learning project – **Day 10**
 
 ---
 
+## Day 11 – Swagger UI (API Documentation)
+
+### What this project does
+- Added Swagger UI using SpringDoc OpenAPI
+- Provides browser-based API testing and documentation
+
+### Swagger URLs
+- Swagger UI: `http://localhost:8080/swagger-ui/index.html`
+- OpenAPI Docs: `http://localhost:8080/v3/api-docs`
+
+### Status
+Learning project – **Day 11**
+
+---
+
 ### Tech Stack
 - Java 17
 - Spring Boot 3
