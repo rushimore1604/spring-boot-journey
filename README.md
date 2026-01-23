@@ -249,6 +249,23 @@ Learning project – **Day 11**
 
 ---
 
+## Day 12 – Validation & Clean Error Responses
+
+### What this project does
+- Added request validation using `spring-boot-starter-validation`
+- Validates user input before saving to database
+- Returns clean validation error messages in JSON
+
+### Example Validation Error Response
+```json
+{
+  "name": "Name is required",
+  "age": "Age must be greater than 0"
+}
+```
+
+---
+
 ### Tech Stack
 - Java 17
 - Spring Boot 3
