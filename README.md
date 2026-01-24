@@ -266,6 +266,23 @@ Learning project – **Day 11**
 
 ---
 
+## Day 13 – Pagination API (GET Users with Page & Size)
+
+### What this project does
+- Fetches users from MySQL database using pagination
+- Returns data page by page (useful for large data)
+- Supports page number and page size
+
+### API Endpoint
+- GET `/api/users/paged?page=0&size=2`
+
+### Example Request
+```http
+GET http://localhost:8080/api/users/paged?page=0&size=2
+```
+
+---
+
 ### Tech Stack
 - Java 17
 - Spring Boot 3
