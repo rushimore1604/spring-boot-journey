@@ -288,7 +288,7 @@ GET http://localhost:8080/api/users/paged?page=0&size=2
 - Spring Boot 3
 - Maven
 
+---
 ## License
 - This project is licensed under the MIT License.
-
 ---
