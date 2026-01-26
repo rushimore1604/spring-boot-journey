@@ -30,4 +30,12 @@ public class UserController {
     public List<User> filterByAge(@RequestParam int minAge) {
         return userService.filterByMinAge(minAge);
     }
+
+    @GetMapping("/sorted")
+    public List<User> getSortedUsers(
+            @RequestParam(defaultValue = "id") String sortBy,
+            @RequestParam(defaultValue = "asc") String direction
+    ) {
+        return userService.getUsersSorted(sortBy, direction);
+    }
 }

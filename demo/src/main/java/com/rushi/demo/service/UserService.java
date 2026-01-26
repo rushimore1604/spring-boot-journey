@@ -27,4 +27,14 @@ public class UserService {
     public List<User> filterByMinAge(int minAge) {
         return userRepository.findByAgeGreaterThanEqual(minAge);
     }
+
+    public List<User> getUsersSorted(String sortBy, String direction) {
+
+        Sort sort = direction.equalsIgnoreCase("desc")
+                ? Sort.by(sortBy).descending()
+                : Sort.by(sortBy).ascending();
+
+        return userRepository.findAll(sort);
+    }
+
 }
