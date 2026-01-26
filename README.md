@@ -283,6 +283,34 @@ GET http://localhost:8080/api/users/paged?page=0&size=2
 
 ---
 
+## Day 14 – Sorting Users API
+### What this project does
+- Sorts users data using Spring Data JPA
+- Supports sorting by id, name, age
+- Supports sorting in asc and desc order
+
+### API Endpoint
+- GET /api/users/sorted?sortBy=name&direction=asc
+
+### Example URLs :
+Sort by name (A-Z):
+- http://localhost:8080/api/users/sorted?sortBy=name&direction=asc
+
+Sort by name (Z-A):
+- http://localhost:8080/api/users/sorted?sortBy=name&direction=desc
+
+Sort by age (small → big):
+- http://localhost:8080/api/users/sorted?sortBy=age&direction=asc
+
+Sort by age (big → small):
+- http://localhost:8080/api/users/sorted?sortBy=age&direction=desc
+
+### Status
+- Learning project – Day 14
+
+___
+
+
 ### Tech Stack
 - Java 17
 - Spring Boot 3
