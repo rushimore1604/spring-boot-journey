@@ -16,26 +16,26 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("/sorted")
-    public List<User> getSortedUsers(@RequestParam(defaultValue = "id") String sortBy) {
-        return userService.getSortedUsers(sortBy);
+    @GetMapping
+    public List<User> getAllUsers() {
+        return userService.getAllUsers();
     }
 
-    @GetMapping("/search")
-    public List<User> searchByName(@RequestParam String name) {
-        return userService.searchByName(name);
-    }
-
-    @GetMapping("/age")
-    public List<User> filterByAge(@RequestParam int minAge) {
-        return userService.filterByMinAge(minAge);
+    @GetMapping("/{id}")
+    public User getUserById(@PathVariable Long id) {
+        return userService.getUserById(id);
     }
 
     @GetMapping("/sorted")
     public List<User> getSortedUsers(
-            @RequestParam(defaultValue = "id") String sortBy,
-            @RequestParam(defaultValue = "asc") String direction
-    ) {
-        return userService.getUsersSorted(sortBy, direction);
+            @RequestParam(defaultValue = "name") String sortBy,
+            @RequestParam(defaultValue = "asc") String direction) {
+
+        return userService.getSortedUsers(sortBy, direction);
+    }
+
+    @GetMapping("/search")
+    public List<User> searchUsers(@RequestParam String name) {
+        return userService.searchByName(name);
     }
 }

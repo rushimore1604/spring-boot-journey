@@ -1,6 +1,7 @@
 package com.rushi.demo.service;
 
 import com.rushi.demo.entity.User;
+import com.rushi.demo.exception.UserNotFoundException;
 import com.rushi.demo.repository.UserRepository;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -16,20 +17,16 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public List<User> getSortedUsers(String sortBy) {
-        return userRepository.findAll(Sort.by(sortBy).ascending());
+    public List<User> getAllUsers() {
+        return userRepository.findAll();
     }
 
-    public List<User> searchByName(String name) {
-        return userRepository.findByNameContainingIgnoreCase(name);
+    public User getUserById(Long id) {
+        return userRepository.findById(id)
+                .orElseThrow(() -> new UserNotFoundException(id));
     }
 
-    public List<User> filterByMinAge(int minAge) {
-        return userRepository.findByAgeGreaterThanEqual(minAge);
-    }
-
-    public List<User> getUsersSorted(String sortBy, String direction) {
-
+    public List<User> getSortedUsers(String sortBy, String direction) {
         Sort sort = direction.equalsIgnoreCase("desc")
                 ? Sort.by(sortBy).descending()
                 : Sort.by(sortBy).ascending();
@@ -37,4 +34,7 @@ public class UserService {
         return userRepository.findAll(sort);
     }
 
+    public List<User> searchByName(String name) {
+        return userRepository.findByNameContainingIgnoreCase(name);
+    }
 }
