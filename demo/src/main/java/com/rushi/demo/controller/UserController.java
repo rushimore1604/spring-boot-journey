@@ -2,9 +2,8 @@ package com.rushi.demo.controller;
 
 import com.rushi.demo.entity.User;
 import com.rushi.demo.service.UserService;
+import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/users")
@@ -17,25 +16,13 @@ public class UserController {
     }
 
     @GetMapping
-    public List<User> getAllUsers() {
-        return userService.getAllUsers();
-    }
-
-    @GetMapping("/{id}")
-    public User getUserById(@PathVariable Long id) {
-        return userService.getUserById(id);
-    }
-
-    @GetMapping("/sorted")
-    public List<User> getSortedUsers(
-            @RequestParam(defaultValue = "name") String sortBy,
-            @RequestParam(defaultValue = "asc") String direction) {
-
-        return userService.getSortedUsers(sortBy, direction);
-    }
-
-    @GetMapping("/search")
-    public List<User> searchUsers(@RequestParam String name) {
-        return userService.searchByName(name);
+    public Page<User> getUsers(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "5") int size,
+            @RequestParam(defaultValue = "id") String sortBy,
+            @RequestParam(defaultValue = "asc") String direction,
+            @RequestParam(required = false) String name
+    ) {
+        return userService.getUsers(page, size, sortBy, direction, name);
     }
 }

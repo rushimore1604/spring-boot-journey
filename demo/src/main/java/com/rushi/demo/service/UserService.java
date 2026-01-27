@@ -1,12 +1,9 @@
 package com.rushi.demo.service;
 
 import com.rushi.demo.entity.User;
-import com.rushi.demo.exception.UserNotFoundException;
 import com.rushi.demo.repository.UserRepository;
-import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class UserService {
@@ -17,24 +14,24 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public List<User> getAllUsers() {
-        return userRepository.findAll();
-    }
+    public Page<User> getUsers(
+            int page,
+            int size,
+            String sortBy,
+            String direction,
+            String name
+    ) {
 
-    public User getUserById(Long id) {
-        return userRepository.findById(id)
-                .orElseThrow(() -> new UserNotFoundException(id));
-    }
-
-    public List<User> getSortedUsers(String sortBy, String direction) {
         Sort sort = direction.equalsIgnoreCase("desc")
                 ? Sort.by(sortBy).descending()
                 : Sort.by(sortBy).ascending();
 
-        return userRepository.findAll(sort);
-    }
+        Pageable pageable = PageRequest.of(page, size, sort);
 
-    public List<User> searchByName(String name) {
-        return userRepository.findByNameContainingIgnoreCase(name);
+        if (name != null && !name.isEmpty()) {
+            return userRepository.findByNameContainingIgnoreCase(name, pageable);
+        }
+
+        return userRepository.findAll(pageable);
     }
 }
