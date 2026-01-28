@@ -283,33 +283,46 @@ GET http://localhost:8080/api/users/paged?page=0&size=2
 
 ---
 
-## Day 14 – Sorting Users API
-### What this project does
-- Sorts users data using Spring Data JPA
-- Supports sorting by id, name, age
-- Supports sorting in asc and desc order
+## Day 14 – Pagination, Sorting & Search
+
+### Features
+- Pagination using page & size
+- Sorting using sortBy & direction
+- Search users by name
+- Clean single REST endpoint
 
 ### API Endpoint
-- GET /api/users/sorted?sortBy=name&direction=asc
+GET /api/users
 
-### Example URLs :
-Sort by name (A-Z):
-- http://localhost:8080/api/users/sorted?sortBy=name&direction=asc
-
-Sort by name (Z-A):
-- http://localhost:8080/api/users/sorted?sortBy=name&direction=desc
-
-Sort by age (small → big):
-- http://localhost:8080/api/users/sorted?sortBy=age&direction=asc
-
-Sort by age (big → small):
-- http://localhost:8080/api/users/sorted?sortBy=age&direction=desc
+### Example
+/api/users?name=rushi&page=0&size=2&sortBy=age&direction=desc
 
 ### Status
-- Learning project – Day 14
+Learning project – Day 14
 
 ___
 
+## Day 15 – Standard API Response Wrapper
+
+### Features
+- Common response structure for all APIs
+- Includes success flag, message, data, and timestamp
+- Uses Generic DTO for flexibility
+
+### Sample Response
+```json
+{
+  "success": true,
+  "message": "Users fetched successfully",
+  "data": {},
+  "timestamp": "2026-01-27T20:30:00"
+}
+```
+
+### Status
+Learning project – Day 15
+
+---
 
 ### Tech Stack
 - Java 17
