@@ -1,5 +1,6 @@
 package com.rushi.demo.controller;
 
+import com.rushi.demo.dto.ApiResponse;
 import com.rushi.demo.entity.User;
 import com.rushi.demo.service.UserService;
 import org.springframework.data.domain.Page;
@@ -16,13 +17,20 @@ public class UserController {
     }
 
     @GetMapping
-    public Page<User> getUsers(
+    public ApiResponse<Page<User>> getUsers(
             @RequestParam(defaultValue = "0") int page,
             @RequestParam(defaultValue = "5") int size,
             @RequestParam(defaultValue = "id") String sortBy,
             @RequestParam(defaultValue = "asc") String direction,
             @RequestParam(required = false) String name
     ) {
-        return userService.getUsers(page, size, sortBy, direction, name);
+
+        Page<User> users = userService.getUsers(page, size, sortBy, direction, name);
+
+        return new ApiResponse<>(
+                true,
+                "Users fetched successfully",
+                users
+        );
     }
 }
